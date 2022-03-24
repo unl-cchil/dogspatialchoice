@@ -1,0 +1,113 @@
+---
+title             : "Do owners know how impulsive their dogs are?"
+shorttitle        : "Do owners know how impulsive their dogs are?"
+
+author: 
+  - name          : "Jeffrey R. Stevens"
+    affiliation   : '1'
+    corresponding : yes
+    email         : jeffrey.r.stevens@gmail.com
+    address: "B83 East Stadium, University of Nebraska, Lincoln, Lincoln, NE, USA 68588. ORCID 0000-0003-2375-1360"
+  - name          : "Madeline Mathias"
+    affiliation   : "1"
+  - name          : "Megan Herridge"
+    affiliation   : "1"
+  - name          : "Kylie Hughes-Duvall"
+    affiliation   : "1"
+  - name          : "London M. Wolff"
+    affiliation   : '1'
+  - name          : "McKenna Yohe"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "University of Nebraska-Lincoln"
+
+documentclass     : "apa6"
+classoption       : "doc"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library(here)
+library(papaja)
+library(lubridate)
+library(rmarkdown)
+library(tidyverse)
+library(BayesFactor)
+library(kableExtra)
+r_refs(here("docs/r-references.bib"))
+source("stevens_etal_2022_rcode.R")
+# load(here("dog_spatial_workspace.RData"))
+typeset_scientific <- function(x) {
+  x <- gsub("e\\+00$", "", x)
+  x <- gsub("e\\+0?(\\d+)$", " \\\\times 10\\^\\{\\1\\}", x)
+  x <- gsub("e\\-0?(\\d+)$", " \\\\times 10\\^\\{-\\1\\}", x)
+  x
+}
+```
+
+
+# Supplementary Materials
+
+\renewcommand{\thetable}{S\arabic{table}}
+\setcounter{table}{0}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\setcounter{figure}{0}
+\setcounter{page}{1}
+
+
+
+
+```{r demographics}
+knitr::kable(demo_table, col.names = NULL, align = "lrr", caption = "Dog owner demographic information",
+             booktabs = TRUE, escape = TRUE, format = "latex", linesep = "") %>% 
+  kable_styling(latex_options = "hold_position") %>% 
+  pack_rows("Gender", 2, 4) %>% 
+  pack_rows("Marital status", 5, 8) %>% 
+  pack_rows("Have other dogs", 9, 10) %>% 
+  pack_rows("Household income", 11, 16) 
+  
+```
+
+
+```{r reliability}
+options(knitr.kable.NA = '--')
+knitr::kable(reliability_table, booktabs = TRUE, escape = FALSE, format = "latex", linesep = "",
+             col.names = c("Scale", "Study 1", "Study 2"),
+             caption = "Scale reliability values") %>% 
+  kable_styling(latex_options = "hold_position") %>% 
+kableExtra::footnote(general = "\\\\newline\\\\textit{Note: }  Values represent Revelle's $\\\\omega_{T}$ except owner personality scales (signaled with *), which use Cronbach's $\\\\alpha$. ", general_title = "", threeparttable = TRUE, escape = FALSE)
+```
+
+\clearpage
+
+```{r dias-all}
+#| fig.align = "center", fig.env = "figure*",
+#| out.width = "75%",
+#| fig.cap = "Relationship between distance traveled and DIAS subscales. We found no correlation between distance traveled and the behavioral regulation subscale in (a) Study 1 or (b) Study 2 or the aggression subscale in (c) Study 1 or (d) Study 2, or the responsiveness subscale in (e) Study 1 or (f) Study 2. Dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. "
+knitr::include_graphics(path = here("figures/distance_dias_subscales.png"))
+```
+
+
+```{r dog-char}
+#| fig.align = "center", fig.env = "figure*",
+#| out.width = "95%",
+#| fig.cap = "Relationship between distance traveled and dog characteristics. Distance traveled was not related to dog (a) sex, (b) weight, (c) age, or (d) AKC Canine Good Citizen status. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+knitr::include_graphics(path = here("figures/dog_characteristics.png"))
+```
+
+
+```{r dog-behavior}
+#| fig.align = "center", fig.env = "figure*",
+#| out.width = "95%",
+#| fig.cap = "Relationship between distance traveled and dog behavior. Distance traveled was not related to (a-e) scores on Bennett and Rolhf's (2007) behavior problems scales, (f) Hiby et al.'s (2004) obedience scale, (g-h) measures of training, or (i) ratings of separation anxiety. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+knitr::include_graphics(path = here("figures/dog_behavior.png"))
+```
+
+```{r owner-char}
+#| fig.align = "center", fig.env = "figure*",
+#| out.width = "95%",
+#| fig.cap = "Relationship between distance travelled and owner characteristics. Distance traveled was not related to dog (a) Monash Dog Owner Relationship Score, (b-f) owner personality, (g) owner cognitive ability, or (h) whether owners had other dogs in the household. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+knitr::include_graphics(path = here("figures/owner_characteristics.png"))
+```
