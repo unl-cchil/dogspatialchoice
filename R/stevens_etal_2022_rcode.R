@@ -8,7 +8,7 @@
 ##
 ## Date Created: 2021-03-08
 ##
-## Date Finalized: 2022-03-22
+## Date Finalized: 2022-05-09
 ##
 ## License: All materials presented here are released under the Creative Commons Attribution 4.0 International Public License (CC BY 4.0).
 ##  You are free to:
@@ -360,6 +360,11 @@ dias_plot_kenlinn <- plot_correlation(clean_data_kenlinn, "dias_overall_score", 
 dias_reg_plot_kenlinn <- plot_correlation(clean_data_kenlinn, "dias_behavioral_regulation_score", "max_distance", "DIAS behavioral regulation score", "Distance traveled (m)", title = FALSE, stats = TRUE, freq = TRUE)
 dias_agg_plot_kenlinn <- plot_correlation(clean_data_kenlinn, "dias_aggression_score", "max_distance", "DIAS aggression score", "Distance traveled (m)", title = FALSE, stats = TRUE, freq = TRUE)
 dias_resp_plot_kenlinn <- plot_correlation(clean_data_kenlinn, "dias_responsiveness_score", "max_distance", "DIAS responsiveness score", "Distance traveled (m)", title = FALSE, stats = TRUE, freq = TRUE)
+
+
+# dias_plot_kenlinn_poster <- plot_correlation(clean_data_kenlinn, "dias_overall_score", "max_distance", "Owner reported impulsivity", "Distance dog traveled (m)", title = FALSE, freq = TRUE)
+# ggsave(here("figures/distance_dias_poster.png"), width = 10, height = 6, scale = 0.5)
+
 
 ### Combined plots ------------------------------------------------------------------
 dias_plot_cchil + dias_plot_kenlinn + plot_annotation(tag_levels = "a", tag_suffix = ")", tag_prefix = "(")

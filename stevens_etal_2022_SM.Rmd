@@ -85,7 +85,7 @@ kableExtra::footnote(general = "\\\\newline\\\\textit{Note: }  Values represent 
 ```{r dias-all}
 #| fig.align = "center", fig.env = "figure*",
 #| out.width = "75%",
-#| fig.cap = "Relationship between distance traveled and DIAS subscales. We found no correlation between distance traveled and the behavioral regulation subscale in (a) Study 1 or (b) Study 2 or the aggression subscale in (c) Study 1 or (d) Study 2, or the responsiveness subscale in (e) Study 1 or (f) Study 2. Dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. "
+#| fig.cap = "Relationship between distance traveled and DIAS subscales. We found no correlation between distance traveled and the behavioral regulation subscale in (a) Study 1 or (b) Study 2 or the aggression subscale in (c) Study 1 or (d) Study 2, or the responsiveness subscale in (e) Study 1 or (f) Study 2. Dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression models. "
 knitr::include_graphics(path = here("figures/distance_dias_subscales.png"))
 ```
 
@@ -93,7 +93,7 @@ knitr::include_graphics(path = here("figures/distance_dias_subscales.png"))
 ```{r dog-char}
 #| fig.align = "center", fig.env = "figure*",
 #| out.width = "95%",
-#| fig.cap = "Relationship between distance traveled and dog characteristics. Distance traveled was not related to dog (a) sex, (b) weight, (c) age, or (d) AKC Canine Good Citizen status. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+#| fig.cap = "Relationship between distance traveled and dog characteristics. Distance traveled was not related to dog (a) sex, (b) weight, (c) age, or (d) AKC Canine Good Citizen status. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression models. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent means and 95\\% confidence intervals, boxes represent interquartile ranges, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
 knitr::include_graphics(path = here("figures/dog_characteristics.png"))
 ```
 
@@ -101,13 +101,13 @@ knitr::include_graphics(path = here("figures/dog_characteristics.png"))
 ```{r dog-behavior}
 #| fig.align = "center", fig.env = "figure*",
 #| out.width = "95%",
-#| fig.cap = "Relationship between distance traveled and dog behavior. Distance traveled was not related to (a-e) scores on Bennett and Rolhf's (2007) behavior problems scales, (f) Hiby et al.'s (2004) obedience scale, (g-h) measures of training, or (i) ratings of separation anxiety. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+#| fig.cap = "Relationship between distance traveled and dog behavior. Distance traveled was not related to (a-e) scores on Bennett and Rolhf's (2007) behavior problems scales, (f) Hiby et al.'s (2004) obedience scale, (g-h) measures of training, or (i) ratings of separation anxiety. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression models. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent means and 95\\% confidence intervals, boxes represent interquartile ranges, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
 knitr::include_graphics(path = here("figures/dog_behavior.png"))
 ```
 
 ```{r owner-char}
 #| fig.align = "center", fig.env = "figure*",
 #| out.width = "95%",
-#| fig.cap = "Relationship between distance travelled and owner characteristics. Distance traveled was not related to dog (a) Monash Dog Owner Relationship Score, (b-f) owner personality, (g) owner cognitive ability, or (h) whether owners had other dogs in the household. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression model. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent mean and 95\\% confidence intervals, boxes represent interquartile range, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
+#| fig.cap = "Relationship between distance travelled and owner characteristics. Distance traveled was not related to dog (a) Monash Dog Owner Relationship Score, (b-f) owner personality, (g) owner cognitive ability, or (h) whether owners had other dogs in the household. For correlations, dots represent individual dog data points, lines represent best fitting linear regression models, and bands represent 95\\% confidence intervals around the regression models. For group comparisons, dots represent individual dog data points, filled shapes represent density distributions, filled dots and error bars represent means and 95\\% confidence intervals, boxes represent interquartile ranges, lines within boxes represent medians, and whiskers represent 1.5 times the interquartile range. "
 knitr::include_graphics(path = here("figures/owner_characteristics.png"))
 ```

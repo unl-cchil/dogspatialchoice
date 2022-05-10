@@ -32,7 +32,7 @@ Stevens, J.R., Mathias, M., Herridge, M., Hughes-Duval, K., Wolff, L.M., & Yohe,
 
 ## Summary
 
-Two data sets were collected. Data set 1 involved 117 dog-owner pairs from Lincoln, Nebraska, USA between Nov 2018 -Jul 2021. Data set 2 involved 103 dog-owner pairs from Lincoln, Nebraska, USA between Aug 2020 - Oct 2021. In the first data file, each row represents behavioral and survey responses from a single dog. In the second data file, each row represents the responses of a single owner for a particular survey scale.
+Two data sets were collected. Data set 1 involved 117 dog-owner pairs from Lincoln, Nebraska, USA between Nov 2018 - Jul 2021. Data set 2 involved 103 dog-owner pairs from Lincoln, Nebraska, USA between Aug 2020 - Oct 2021. In the first data file, each row represents behavioral and survey responses from a single dog. In the second data file, each row represents the responses of a single owner for a particular survey scale.
 
 ## License
 
