@@ -66,5 +66,5 @@ rmd_file <- str_replace(rmd_file, ": \"pub\"", ": \"doc\"") %>%
 write_lines(rmd_file, "stevens_etal_2022_SM.Rmd")
 rmarkdown::render("stevens_etal_2022_SM.Rmd")
 
-+# Create zip file
+# Create zip file
 zip(zipfile = "stevens_etal_2022_rr", files = c("r-references.bib", "README.md", "stevens_etal_2022_data1.csv", "stevens_etal_2022_data2.csv", "stevens_etal_2022_rcode.R", "stevens_etal_2022_SM.pdf", "stevens_etal_2022.bib", "stevens_etal_2022.csl", "stevens_etal_2022.pdf", "stevens_etal_2022.Rmd"))
