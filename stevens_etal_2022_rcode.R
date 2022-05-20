@@ -298,6 +298,7 @@ dias_resp_plot_cchil <- plot_correlation(clean_data_cchil, "dias_responsiveness_
 clean_data_kenlinn <- all_data %>% 
   filter(experiment == 2)
 
+
 item_data_kenlinn <- item_data %>% 
   filter(experiment == 2)
 
@@ -317,6 +318,8 @@ dog_sex_kenlinn <- clean_data_kenlinn %>%
   select(dog_sex, dog_neutered) %>% 
   unite(sex_neuter, everything())
 dog_sex_table_kenlinn <- table(dog_sex_kenlinn)
+
+source <- table(clean_data_kenlinn$source)
 
 
 ## Reliability for survey measures ---------------------------------------------------
@@ -342,6 +345,13 @@ owner_personality_openness_reliability_kenlinn <- calculate_reliability(item_dat
 
 
 ## DIAS ---------------------------------------------------
+
+max_distance_source_ttest <- t.test(max_distance ~ source, data = clean_data_kenlinn)
+max_distance_source_ttest_bf <- ttestBF(formula = max_distance ~ source, data = clean_data_kenlinn)
+dias_source_ttest <- t.test(dias_overall_score ~ source, data = clean_data_kenlinn)
+dias_source_ttest_bf <- ttestBF(formula = dias_overall_score ~ source, data = clean_data_kenlinn)
+
+
 ### Correlations ------------------------------------------------------------------
 dias_corr_kenlinn <- cor.test(clean_data_kenlinn$max_distance, clean_data_kenlinn$dias_overall_score)
 dias_corr_bf_kenlinn <- correlationBF(clean_data_kenlinn$max_distance, clean_data_kenlinn$dias_overall_score)
@@ -391,7 +401,11 @@ dias_study_plot <- plot_raincloud(all_data, "experiment", "dias_overall_score", 
 age_ttest <- t.test(dog_age ~ experiment, data = all_data)
 age_ttest_bf <- ttestBF(formula = dog_age ~ experiment, data = all_data)
 age_study_plot <- plot_raincloud(all_data, "experiment", "dog_age", "Study", "Dog age (years)", binwidth = 0.2, ymin = 0.75, ymax = 16.8, freq = TRUE, title = FALSE, stats = TRUE)
-
+training_ttest <- t.test(training_sessions ~ experiment, data = all_data)
+training_ttest_bf <- ttestBF(formula = training_sessions ~ experiment, data = filter(all_data, !is.na(training_sessions)))
+training_summary <- all_data %>%
+  group_by(experiment) %>% 
+  summarize(mean = mean(training_sessions, na.rm = TRUE), sd = sd(training_sessions, na.rm = TRUE))
 
 ## Correlates ---------------------------------------------------
 ### DIAS ---------------------------------------------------
