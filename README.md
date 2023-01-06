@@ -201,7 +201,7 @@ scale.</code>
 url
 </td>
 <td>
-<code itemprop="url"><https://github.com/unl-cchil/dogspatialchoice></code>
+<code itemprop="url">https://github.com/unl-cchil/dogspatialchoice</code>
 </td>
 </tr>
 <tr>
@@ -209,7 +209,7 @@ url
 sameAs
 </td>
 <td>
-<code itemprop="sameAs"><https://github.com/unl-cchil/dogspatialchoice></code>
+<code itemprop="sameAs">https://github.com/unl-cchil/dogspatialchoice</code>
 </td>
 </tr>
 <tr>
@@ -217,7 +217,7 @@ sameAs
 citation
 </td>
 <td>
-<code itemprop="citation"><https://doi.org/10.26451/abc.09.03.02.2022></code>
+<code itemprop="citation">https://doi.org/10.26451/abc.09.03.02.2022</code>
 </td>
 </tr>
 <tr>
@@ -251,7 +251,7 @@ name
 url
 </td>
 <td>
-<code itemprop="url"><https://creativecommons.org/licenses/by-sa/4.0/></code>
+<code itemprop="url">https://creativecommons.org/licenses/by-sa/4.0/</code>
 </td>
 </tr>
 </table>
