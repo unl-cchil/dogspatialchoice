@@ -34,10 +34,10 @@ manuscript <- read_file("docs/stevens_etal.Rmd") %>%
   str_replace_all("apa7_chron.csl", "stevens_etal_2022.csl") %>%
   str_replace('# source\\(here\\("R/stevens_etal_2022_rcode.R"\\)\\)', 'source\\("stevens_etal_2022_rcode.R"\\)') %>% 
   str_replace('load\\(here\\("dog_spatial_workspace.RData"\\)\\)', '# load\\(here\\("dog_spatial_workspace.RData"\\)\\)') %>% 
-  str_replace_all(" Figure used with permission under a CC-BY4.0 license: Stevens, et al., 2022; available at https://doi.org/10.31234/osf.io/hyvdq.", "") %>%
-  str_replace_all("Table used with permission under a CC-BY4.0 license: Stevens, et al., 2022; available at https://doi.org/10.31234/osf.io/hyvdq.", "") %>%
+  str_replace_all(" Figure used with permission under a CC-BY4.0 license: Stevens et al. (2022); available at https://doi.org/10.31234/osf.io/hyvdq.", "") %>%
+  str_replace_all("Table used with permission under a CC-BY4.0 license: Stevens et al. (2022); available at https://doi.org/10.31234/osf.io/hyvdq.", "") %>%
   str_replace_all("linenumbers       : yes", "linenumbers       : no") %>%
-  str_replace("authornote: \\|", paste("authornote: \\|\n\  **Note: This is a pre-print and has not been peer reviewed.**\n\n\  PsyArXiv: https://doi.org/10.31234/osf.io/hyvdq\n\n\  Version:", Sys.Date(), "\n")) %>% 
+  str_replace("authornote: \\|", paste("authornote: \\|\n\  PsyArXiv: https://doi.org/10.31234/osf.io/hyvdq\n\n\  Version:", Sys.Date(), "\n")) %>% 
   str_replace_all(": \"man\"", ": \"pub\"") %>%
   str_replace_all('fig.align = "center"', 'fig.align = "center", fig.env = \"figure*\"') %>%
   # str_replace_all('out.width = "33\\%"', 'out.width = "30\\%"') %>% 
@@ -52,7 +52,7 @@ manuscript <- read_file("docs/stevens_etal.Rmd") %>%
 # write_lines(rmd_file, "stevens_etal_2022.Rmd")
 rmarkdown::render("stevens_etal_2022.Rmd")
 file.copy("stevens_etal_2022.pdf", "stevens_etal_2022_all.pdf", overwrite = TRUE)
-pdf_subset("stevens_etal_2022_all.pdf", pages = 1:14, output = "stevens_etal_2022.pdf")
+pdf_subset("stevens_etal_2022_all.pdf", pages = 1:15, output = "stevens_etal_2022.pdf")
 
 # Edit supplementary materials
 rmdfile <- read_lines("stevens_etal_2022.Rmd")
@@ -61,8 +61,10 @@ max_line <- length(rmdfile)
 rmd_file <- rmdfile[c(1:24, 68:92, sm_line:max_line)]
 rmd_file <- str_replace(rmd_file, ": \"pub\"", ": \"doc\"") %>% 
   str_replace("\\\\singlespacing", "") %>% 
+  str_replace("# Introduction", "") %>% 
+  str_replace("# Supplementary Materials", "") %>% 
   str_replace('kableExtra::footnote\\(general = "", threeparttable = TRUE\\)', "") %>% 
-  str_replace('pack_rows\\("Household income", 11, 16\\) %>%', 'pack_rows\\("Household income", 11, 16\\)')
+  str_replace('pack_rows\\("Household income", 11, 16\\) %>%', 'pack_rows\\("Household income", 11, 16\\) %>%')
 write_lines(rmd_file, "stevens_etal_2022_SM.Rmd")
 rmarkdown::render("stevens_etal_2022_SM.Rmd")
 

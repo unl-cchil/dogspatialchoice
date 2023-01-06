@@ -27,7 +27,7 @@ This repository provides the reproducible research materials for our project tha
 ## Citation
 If you use any of these materials, please cite:
 
-Stevens, J.R., Mathias, M., Herridge, M., Hughes-Duval, K., Wolff, L.M., & Yohe, M. (2022). Do owners know how impulsive their dogs are? PsyArXiv. https://doi.org/10.31234/osf.io/hyvdq
+Stevens, J.R., Mathias, M., Herridge, M., Hughes-Duval, K., Wolff, L.M., & Yohe, M. (2022). Do owners know how impulsive their dogs are? Animal Behavior and Cognition, 9(3):261-286. https://doi.org/10.26451/abc.09.03.02.2022
 
 
 ## Summary
@@ -108,3 +108,56 @@ No additional restrictions — You may not apply legal terms or technological me
 
  Once the script runs without errors, you can compile the R Markdown document `stevens_etal_2022.Rmd.`  Open this file in RStudio and ensure that you have packages [{knitr}](https://yihui.org/knitr/) and [{rmarkdown}](https://rmarkdown.rstudio.com/) installed.  Once installed, use {knitr} to render the document (control-shift-K).  Use the same process to render `stevens_etal_2022_SM.Rmd`.
 
+# Dataset Metadata
+The following table is necessary for this dataset to be indexed by search
+engines such as <a href="https://g.co/datasetsearch">Google Dataset Search</a>.
+<div itemscope itemtype="http://schema.org/Dataset">
+<table>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+<tr>
+<td>name</td>
+<td><code itemprop="name">Dog spatial impulsivity and owner perceptions of dog impulsivity dataset</code></td>
+</tr>
+<tr>
+<td>description</td>
+<td><code itemprop="description">The dataset from the paper [Do owners know how impulsive their dogs are?](https://doi.org/10.26451/abc.09.03.02.2022). Two data sets were collected. Data set 1 involved 117 dog-owner pairs from Lincoln, Nebraska, USA between Nov 2018 - Jul 2021. Data set 2 involved 103 dog-owner pairs from Lincoln, Nebraska, USA between Aug 2020 - Oct 2021. In the first data file, each row represents behavioral and survey responses from a single dog. In the second data file, each row represents the responses of a single owner for a particular survey scale.</code></td>
+</tr>
+</tr>
+<tr>
+<td>url</td>
+<td><code itemprop="url">https://github.com/unl-cchil/dogspatialchoice</code></td>
+</tr>
+<tr>
+<td>sameAs</td>
+<td><code itemprop="sameAs">https://github.com/unl-cchil/dogspatialchoice</code></td>
+</tr>
+<tr>
+<td>citation</td>
+<td><code itemprop="citation">https://doi.org/10.26451/abc.09.03.02.2022</code></td>
+</tr>
+<tr>
+<td>license</td>
+<td>
+<div itemscope itemtype="http://schema.org/CreativeWork" itemprop="license">
+<table>
+<tr>
+<th>property</th>
+<th>value</th>
+</tr>
+<tr>
+<td>name</td>
+<td><code itemprop="name">CC BY-SA 4.0</code></td>
+</tr>
+<tr>
+<td>url</td>
+<td><code itemprop="url">https://creativecommons.org/licenses/by-sa/4.0/</code></td>
+</tr>
+</table>
+</div>
+</td>
+</tr>
+</table>
+</div>
